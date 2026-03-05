@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 22:47:16 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/02/08 22:47:17 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/05 15:27:47 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,19 +45,19 @@ public:
 	Contact& operator=(const Contact& other);
 	~Contact() {};
 
-	void		setIndex(int index) { _index = index; };
-	void		setFirstName(std::string first_name) { _first_name = first_name; };
-	void		setLastName(std::string last_name) { _last_name = last_name; };
-	void		setNickname(std::string nickname) { _nickname = nickname; };
-	void		setPhoneNumber(std::string phone_number) { _phone_number = phone_number; };
-	void		setDarkestSecret(std::string darkest_secret) { _darkest_secret = darkest_secret; };
+	void		setIndex(int index);
+	void		setFirstName(std::string first_name);
+	void		setLastName(std::string last_name);
+	void		setNickname(std::string nickname);
+	void		setPhoneNumber(std::string phone_number);
+	void		setDarkestSecret(std::string darkest_secret);
 
-	int			getIndex() const { return(_index); };
-	std::string	getFirstName() const { return(_first_name); };
-	std::string	getLastName() const { return(_last_name); };
-	std::string	getNickname() const { return(_nickname); };
-	std::string	getPhoneNumber() const { return(_phone_number); };
-	std::string	getDarkestSecret() const { return(_darkest_secret); };
+	int			getIndex() const;
+	std::string	getFirstName() const;
+	std::string	getLastName() const;
+	std::string	getNickname() const;
+	std::string	getPhoneNumber() const;
+	std::string	getDarkestSecret() const;
 
 	void		displayContact() const;
 	void		displayContactDetails() const;
