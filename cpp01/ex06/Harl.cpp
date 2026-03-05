@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 17:51:01 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/02/23 23:29:36 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:57:26 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,13 @@ void	Harl::harlFilter( std::string level )
 	{
 		case 0:
 			this->debug();
+			// fall through
 		case 1:
 			this->info();
+			// fall through
 		case 2:
 			this->warning();
+			// fall through
 		case 3:
 			this->error();
 			break;

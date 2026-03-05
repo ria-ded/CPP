@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:56:52 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/02/17 17:56:53 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:42:43 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class HumanA
 	Weapon&		_weapon;
 
 public:
-	HumanA( std::string name, Weapon& weapon ): _name(name), _weapon(weapon) {};
+	HumanA( const std::string& name, Weapon& weapon ): _name(name), _weapon(weapon) {};
 	~HumanA() {};
 
 	void	attack();

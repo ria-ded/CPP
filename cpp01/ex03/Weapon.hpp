@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:56:38 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/02/17 17:56:39 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/05 18:40:06 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	~Weapon() {};
 
 	const std::string&	getType();
-	void				setType( std::string type );
+	void				setType( const std::string& type );
 };
 
 #endif
