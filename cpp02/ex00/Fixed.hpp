@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 17:15:37 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/03/02 17:34:06 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/07 18:09:09 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 
 class Fixed{
 	int					_value;
-	static const int	_fractBit;
+	static const int	_fractBit = 8;
 public:
 	Fixed();
 	Fixed( const Fixed& other );
-	Fixed& operator=( const Fixed& other);
+	Fixed& operator=( const Fixed& other );
 	~Fixed();
 
 	int		getRawBits( void ) const;

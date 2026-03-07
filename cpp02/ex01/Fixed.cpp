@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 17:16:19 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/03/02 17:33:57 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/07 18:15:22 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 const int Fixed::_fractBit = 8;
 
-Fixed::Fixed(){
+Fixed::Fixed() : _value(0) {
 	std::cout << "Default constructor called" << std::endl;
-	_value = 0;
 }
 
 Fixed::Fixed( const Fixed& other ){

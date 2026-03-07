@@ -6,13 +6,13 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 17:16:19 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/03/02 17:34:01 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/07 18:09:14 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int Fixed::_fractBit = 8;
+// const int Fixed::_fractBit = 8;
 
 Fixed::Fixed(){
 	std::cout << "Default constructor called" << std::endl;
@@ -21,7 +21,7 @@ Fixed::Fixed(){
 
 Fixed::Fixed( const Fixed& other ){
 	std::cout << "Copy constructor called" << std::endl;
-	this->_value = other._value;
+	*this = other;
 }
 
 Fixed& Fixed::operator=( const Fixed& other ){

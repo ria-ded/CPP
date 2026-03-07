@@ -6,7 +6,7 @@
 /*   By: mdziadko <mdziadko@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 17:16:19 by mdziadko          #+#    #+#             */
-/*   Updated: 2026/03/02 17:33:19 by mdziadko         ###   ########.fr       */
+/*   Updated: 2026/03/07 18:40:51 by mdziadko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 const int Fixed::_fractBit = 8;
 
-Fixed::Fixed(){
-	_value = 0;
-}
+Fixed::Fixed() : _value(0) {}
 
-Fixed::Fixed( const Fixed& other ){
-	*this = other;
-}
+Fixed::Fixed( const Fixed& other ) : _value(other._value) {}
 
 Fixed& Fixed::operator=( const Fixed& other ){
 	if (this != &other){
@@ -57,14 +53,14 @@ Fixed	Fixed::operator-( const Fixed& other ) const {
 Fixed	Fixed::operator*( const Fixed& other ) const {
 	Fixed	res;
 
-	res._value = ((long)this->_value * (long)other._value) >> 8;
+	res._value = ((long)this->_value * (long)other._value) >> _fractBit;
 	return res;
 }
 
 Fixed	Fixed::operator/( const Fixed& other ) const {
 	Fixed	res;
 
-	res._value = (this->_value << 8) / other._value;
+	res._value = (this->_value << _fractBit) / other._value;
 	return res;
 }
 
@@ -98,8 +94,7 @@ Fixed&	Fixed::operator++(){
 }
 
 Fixed	Fixed::operator++(int){
-	Fixed copy;
-	copy.setRawBits(this->_value);
+	Fixed copy(*this);
 	this->_value++;
 	return copy;
 }
@@ -110,8 +105,7 @@ Fixed&	Fixed::operator--(){
 }
 
 Fixed	Fixed::operator--(int){
-	Fixed copy;
-	copy.setRawBits(this->_value);
+	Fixed copy(*this);
 	this->_value--;
 	return copy;
 }
